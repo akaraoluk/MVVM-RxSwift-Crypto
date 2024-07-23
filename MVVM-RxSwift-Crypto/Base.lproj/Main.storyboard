@@ -19,7 +19,50 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XGX-A5-CiN">
                                 <rect key="frame" x="0.0" y="59" width="393" height="759"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CryptoCell" rowHeight="150" id="9Gk-wj-Vgz" customClass="CryptoTableViewCell" customModule="MVVM_RxSwift_Crypto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Gk-wj-Vgz" id="DyO-Lc-3dd">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pvs-Kj-0XQ">
+                                                    <rect key="frame" x="22" y="15.999999999999998" width="361" height="20.333333333333329"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8XY-ai-ASs">
+                                                    <rect key="frame" x="22" y="46.333333333333336" width="361" height="20.000000000000007"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="20" id="5p6-An-gI2"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="pvs-Kj-0XQ" secondAttribute="trailing" constant="10" id="Fno-My-mHE"/>
+                                                <constraint firstItem="pvs-Kj-0XQ" firstAttribute="leading" secondItem="DyO-Lc-3dd" secondAttribute="leading" constant="22" id="LYb-gp-0kO"/>
+                                                <constraint firstItem="pvs-Kj-0XQ" firstAttribute="top" secondItem="DyO-Lc-3dd" secondAttribute="top" constant="16" id="YZt-vI-pE5"/>
+                                                <constraint firstItem="8XY-ai-ASs" firstAttribute="leading" secondItem="DyO-Lc-3dd" secondAttribute="leading" constant="22" id="dt4-bO-xlg"/>
+                                                <constraint firstAttribute="trailing" secondItem="8XY-ai-ASs" secondAttribute="trailing" constant="10" id="gPu-ui-ZQ8"/>
+                                                <constraint firstItem="8XY-ai-ASs" firstAttribute="top" secondItem="pvs-Kj-0XQ" secondAttribute="bottom" constant="10" id="kK8-XM-yHf"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="pvs-Kj-0XQ" id="w0X-QB-QX4"/>
+                                            <outlet property="priceLabel" destination="8XY-ai-ASs" id="LDb-BQ-y9T"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" id="HVe-7h-Wm2">
+                                <rect key="frame" x="0.0" y="404" width="393" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -31,12 +74,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="indicatorView" destination="HVe-7h-Wm2" id="9yN-ta-IVm"/>
                         <outlet property="tableView" destination="XGX-A5-CiN" id="0Wr-KO-uFF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="4"/>
+            <point key="canvasLocation" x="101.5267175572519" y="3.5211267605633805"/>
         </scene>
     </scenes>
     <resources>
